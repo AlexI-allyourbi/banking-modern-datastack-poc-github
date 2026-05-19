@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: datamart_00
+    description: "Legacy datamart with NUC (client unit) summaries"
+    tables:
+      - name: a_resumo_nuc_fm
+        description: "NUC summary with tax ID, manager, branch, and name"
+
+  - name: datamart
+    description: "Main banking datamart"
+    tables:
+      - name: rentabilidade_be_rwa_histo
+        description: "Historical RWA (Risk-Weighted Assets) for profitability"
+      - name: operacoes_margens_histo
+        description: "Historical operations with financial margins"
+      - name: l_produto
+        description: "Product lookup dimension"
+
+  - name: dmke_base
+    description: "DMKE base/reference tables"
+    tables:
+      - name: rentabilidade_be_rwa_histo
+        description: "RWA history (DMKE copy, used for max date lookup)"
+      - name: rentabilidade_be_param
+        description: "Profitability parameters per period (tax rate, capital ratio, etc.)"
+      - name: comissoes_consolidada_histo
+        description: "Consolidated commissions history by NUC and product"
+      - name: comissoes_l_itens
+        description: "Commission items lookup"

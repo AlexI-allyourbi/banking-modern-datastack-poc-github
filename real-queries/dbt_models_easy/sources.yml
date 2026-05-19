@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: datamart
+    description: "Banking credit datamart source system"
+    tables:
+      - name: operacoes_credito_cp_histo
+        description: "Historical short-term credit operations"
+      - name: nuc_histo
+        description: "Historical NUC (client unit) data with responsible branch"
+      - name: l_produto_histo
+        description: "Product lookup (historical)"
+      - name: l_situacao
+        description: "Situation/status lookup"
+      - name: l_produto_histo
+        description: "Product lookup with subfamily codes"
+      - name: operacoes_credito_cp_global_histo
+        description: "Global historical credit operations (for installment tracking)"
+      - name: t_dia
+        description: "Calendar dimension (day-level, with next month-end)"
+      - name: l_orgao
+        description: "Branch/organ lookup"
+      - name: l_area
+        description: "Area lookup"
+      - name: l_regiao
+        description: "Region lookup"
+      - name: l_rede
+        description: "Network lookup"
+      - name: l_dia
+        description: "Calendar dimension (day-level, with quarter)"
+
+  - name: campanhas
+    description: "Campaign/pre-approval data"
+    tables:
+      - name: preaprovados_nic_limites_histo
+        description: "Pre-approved credit limits history per NIC"

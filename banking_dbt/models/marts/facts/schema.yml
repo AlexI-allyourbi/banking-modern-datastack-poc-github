@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fact_transactions
+    columns:
+      - name: transaction_type
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - DEPOSIT
+                - WITHDRAWAL
+                - TRANSFER

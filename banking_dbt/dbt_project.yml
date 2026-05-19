@@ -6,6 +6,7 @@ name: 'banking_dbt'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
+# use variables to change the profile based on the environment
 profile: 'banking_dbt'
 
 # These configurations specify where dbt should look for different types of files.

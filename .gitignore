@@ -24,3 +24,7 @@ __pycache__/
 .DS_Store
 docker-compose.override.yml
 logs/
+
+# Python virtual environment
+.venv/
+.python-version

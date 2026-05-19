@@ -1,0 +1,8 @@
+CREATE DATABASE banking;
+
+CREATE SCHEMA banking.raw;
+
+CREATE TABLE customers (v VARIANT);
+CREATE TABLE accounts (v VARIANT);
+CREATE TABLE transactions (v VARIANT);
+

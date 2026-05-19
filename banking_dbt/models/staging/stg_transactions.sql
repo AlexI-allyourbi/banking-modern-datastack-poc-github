@@ -7,6 +7,6 @@ SELECT
     v:txn_type::string           AS transaction_type,
     v:related_account_id::string AS related_account_id,
     v:status::string             AS status,
-    v:created_at::timestamp      AS transaction_time,
+    to_timestamp(v:created_at::number / 1000000) AS transaction_time,
     CURRENT_TIMESTAMP            AS load_timestamp
 FROM {{ source('raw', 'transactions') }}
