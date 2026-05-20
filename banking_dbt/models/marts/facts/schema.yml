@@ -10,4 +10,4 @@ models:
               values:
                 - DEPOSIT
                 - WITHDRAWAL
-                - TRANSFER
+#                - TRANSFER
